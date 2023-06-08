@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Map;
 
 @RestController
 public class MovesController {
@@ -19,8 +18,8 @@ public class MovesController {
     private MovesService movesService;
     @PostMapping("/api/v1/movePiece/{x}/{y}")
     public ResponseEntity<ResponseData> movePiece(@PathVariable short x, @PathVariable short y, @RequestBody Position secondPiece){
-        movesService.makeMove(x,y,secondPiece);
+        var body = movesService.makeMove(x,y,secondPiece);
         var status = HttpStatus.OK;
-        return new ResponseEntity<>(status);
+        return new ResponseEntity<>(body,status);
     }
 }

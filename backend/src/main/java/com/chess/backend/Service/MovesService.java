@@ -13,13 +13,12 @@ public class MovesService {
     private GameBoard gameBoard;
     public ResponseData makeMove(short x, short y, Position newPosition){
         Piece piece = gameBoard.getPieceAtPosition(x,y);
-        if(!isMoveIsPossible(x, y, newPosition)){
-//            throw new IllegalMoveException();
+        var response =  new ResponseData();
+        if(piece.isMovePossible(newPosition)){
+
         }
-        return new ResponseData();
+
+        return response;
     }
 
-    public boolean isMoveIsPossible(short x, short y, Position newPosition) {
-        return true;
-    }
 }
