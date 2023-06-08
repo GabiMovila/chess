@@ -1,24 +1,26 @@
 package com.chess.backend.controllers;
 
 import com.chess.backend.Service.MovesService;
-import com.chess.backend.models.Piece;
 import com.chess.backend.models.Position;
 import com.chess.backend.models.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 @RestController
 public class MovesController {
     @Autowired
     private MovesService movesService;
-    @PostMapping("/api/v1/movePiece")
-    public ResponseEntity<ResponseData> movePiece(Piece piece, Position oldPosition, Position newPosition){
-        var response = movesService.makeMove(piece, oldPosition, newPosition);
+    @PostMapping("/api/v1/movePiece/{x}/{y}")
+    public ResponseEntity<ResponseData> movePiece(@PathVariable short x, @PathVariable short y, @RequestBody Position secondPiece){
+        movesService.makeMove(x,y,secondPiece);
         var status = HttpStatus.OK;
-        return new ResponseEntity<>(response,status);
+        return new ResponseEntity<>(status);
     }
 }

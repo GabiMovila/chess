@@ -4,6 +4,11 @@ public class Position {
     private short X;
     private short Y;
 
+    public Position(short x,short y){
+        this.X=x;
+        this.Y=y;
+    }
+
     public short getX() {
         return X;
     }
