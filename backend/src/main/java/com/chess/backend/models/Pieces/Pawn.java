@@ -80,7 +80,7 @@ public class Pawn extends Piece {
         return false;
     }
     //TODO implementation
-    private boolean canPanTakeEnPassant(){
+    private boolean canPawnTakeEnPassant(){
         return false;
     }
 }

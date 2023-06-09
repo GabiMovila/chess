@@ -1,27 +1,27 @@
 package com.chess.backend.models;
 
 public class Position {
-    private short X;
-    private short Y;
+    private int X;
+    private int Y;
 
-    public Position(short x,short y){
+    public Position(int x,int y){
         this.X=x;
         this.Y=y;
     }
 
-    public short getX() {
+    public int getX() {
         return X;
     }
 
-    public void setX(short x) {
+    public void setX(int x) {
         X = x;
     }
 
-    public short getY() {
+    public int getY() {
         return Y;
     }
 
-    public void setY(short y) {
+    public void setY(int y) {
         Y = y;
     }
 }

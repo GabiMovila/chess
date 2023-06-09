@@ -1,5 +1,8 @@
 package com.chess.backend.models;
 
+import com.chess.backend.Types.PieceColor;
+import com.chess.backend.models.Pieces.Rook;
+
 import java.util.HashMap;
 
 public class GameBoard {
@@ -17,6 +20,6 @@ public class GameBoard {
     }
 
     public void startGame(){
-
+        board.put(new Position(1,1),new Rook(PieceColor.WHITE));
     }
 }
