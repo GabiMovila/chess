@@ -45,6 +45,5 @@ What you get in response is either 1 or 2 pieceses new info. This is because eve
 The board has 2 dimensions: X horizontally and Y vertically. Each of these has a value between 1 and 8.
 
 # TODO:
-* refactor methods signatures so it requires both parameters as Positions (Create the position in controller)
 * add code quality control tools
 * play with the custom exception

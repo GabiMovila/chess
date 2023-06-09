@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 public class MovesService {
     @Autowired
     private GameBoard gameBoard;
-    public ResponseData makeMove(short x, short y, Position newPosition){
-        Piece piece = gameBoard.getPieceAtPosition(x,y);
+    public ResponseData makeMove(Position oldPosition, Position newPosition){
+        Piece piece = gameBoard.getPieceAtPosition(oldPosition);
         var response =  new ResponseData();
         if(piece.isMovePossible(newPosition)){
 

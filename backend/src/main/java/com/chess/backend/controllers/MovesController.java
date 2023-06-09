@@ -18,7 +18,8 @@ public class MovesController {
     private MovesService movesService;
     @PostMapping("/api/v1/movePiece/{x}/{y}")
     public ResponseEntity<ResponseData> movePiece(@PathVariable short x, @PathVariable short y, @RequestBody Position secondPiece){
-        var body = movesService.makeMove(x,y,secondPiece);
+        var firstPosition = new Position(x,y);
+        var body = movesService.makeMove(firstPosition,secondPiece);
         var status = HttpStatus.OK;
         return new ResponseEntity<>(body,status);
     }
