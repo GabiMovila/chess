@@ -47,3 +47,4 @@ The board has 2 dimensions: X horizontally and Y vertically. Each of these has a
 # TODO:
 * add code quality control tools
 * play with the custom exception
+* Adding special rules: Pawn moving 2 squares, Castle, En Passant
