@@ -45,6 +45,11 @@ What you get in response is either 1 or 2 pieceses new info. This is because eve
 The board has 2 dimensions: X horizontally and Y vertically. Each of these has a value between 1 and 8.
 
 # TODO:
-* add code quality control tools
+Others
+* **WRITE TESTS**
+* Explore some git-hub actions (To run the tests when you do a PR, things like that)
+---
+Code
+* decide on what the Response should look like
 * play with the custom exception
 * Adding special rules: Pawn moving 2 squares, Castle, En Passant

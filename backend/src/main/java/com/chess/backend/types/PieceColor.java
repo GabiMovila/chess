@@ -1,4 +1,4 @@
-package com.chess.backend.Types;
+package com.chess.backend.types;
 
 public enum PieceColor {
     WHITE,
