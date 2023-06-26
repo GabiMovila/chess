@@ -4,9 +4,8 @@ import com.chess.backend.Types.PieceColor;
 import com.chess.backend.models.Position;
 
 public abstract class Piece {
-    public Position position;
     public PieceColor color;
-    public abstract boolean isMovePossible(Position position);
+    public abstract boolean isMovePossible(Position oldPosition, Position newPosition);
 
      /**
      * Checks whether the move is blocked,

@@ -3,11 +3,9 @@ package com.chess.backend.models;
 import com.chess.backend.Types.PieceColor;
 import com.chess.backend.models.Pieces.*;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 
-@Component
 @Slf4j
 public class GameBoard {
 

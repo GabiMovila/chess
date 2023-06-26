@@ -5,7 +5,7 @@ import com.chess.backend.models.Position;
 
 public class King extends Piece {
     @Override
-    public boolean isMovePossible(Position newPosition) {
+    public boolean isMovePossible(Position oldPosition, Position newPosition) {
         return false;
     }
 
