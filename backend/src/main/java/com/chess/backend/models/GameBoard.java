@@ -1,7 +1,7 @@
 package com.chess.backend.models;
 
-import com.chess.backend.Types.PieceColor;
-import com.chess.backend.models.Pieces.*;
+import com.chess.backend.types.PieceColor;
+import com.chess.backend.models.pieces.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;

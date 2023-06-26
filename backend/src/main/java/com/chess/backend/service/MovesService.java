@@ -1,7 +1,7 @@
-package com.chess.backend.Service;
+package com.chess.backend.service;
 
 import com.chess.backend.models.GameBoard;
-import com.chess.backend.models.Pieces.Piece;
+import com.chess.backend.models.pieces.Piece;
 import com.chess.backend.models.Position;
 import com.chess.backend.models.ResponseData;
 import org.springframework.stereotype.Service;

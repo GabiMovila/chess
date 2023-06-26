@@ -1,7 +1,7 @@
 package com.chess.backend.controllers;
 
-import com.chess.backend.Service.MovesService;
-import com.chess.backend.models.Pieces.Piece;
+import com.chess.backend.service.MovesService;
+import com.chess.backend.models.pieces.Piece;
 import com.chess.backend.models.Position;
 import com.chess.backend.models.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
