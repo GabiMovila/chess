@@ -1,7 +1,7 @@
 package com.chess.backend.Service;
 
 import com.chess.backend.models.GameBoard;
-import com.chess.backend.models.Piece;
+import com.chess.backend.models.Pieces.Piece;
 import com.chess.backend.models.Position;
 import com.chess.backend.models.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +19,14 @@ public class MovesService {
         }
 
         return response;
+    }
+
+    public Piece getPiece(Position position){
+        return gameBoard.getPieceAtPosition(position);
+    }
+
+    public void startGame(){
+        gameBoard.startGame();
     }
 
 }

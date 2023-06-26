@@ -1,13 +1,17 @@
 package com.chess.backend.models.Pieces;
 
+import com.chess.backend.Types.PieceColor;
 import com.chess.backend.models.GameBoard;
-import com.chess.backend.models.Piece;
 import com.chess.backend.models.Position;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Pawn extends Piece {
     @Autowired
     private GameBoard gameBoard;
+
+    public Pawn(PieceColor pieceColor){
+        this.color = pieceColor;
+    }
     @Override
     public boolean isMovePossible(Position newPosition) {
         if(isMoveBlocked()){

@@ -1,6 +1,7 @@
-package com.chess.backend.models;
+package com.chess.backend.models.Pieces;
 
 import com.chess.backend.Types.PieceColor;
+import com.chess.backend.models.Position;
 
 public abstract class Piece {
     public Position position;
