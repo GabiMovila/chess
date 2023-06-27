@@ -47,6 +47,7 @@ The board has 2 dimensions: X horizontally and Y vertically. Each of these has a
 # TODO:
 Others
 * **WRITE TESTS**
+* Add some code coverage tools
 * Explore some git-hub actions (To run the tests when you do a PR, things like that)
 ---
 Code
