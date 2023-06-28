@@ -9,6 +9,11 @@ public class Bishop extends Piece {
         return false;
     }
 
+    @Override
+    public boolean isGivingCheck(Position newPosition) {
+        return false;
+    }
+
     public Bishop(PieceColor pieceColor) {
         this.color= pieceColor;
     }

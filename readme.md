@@ -46,11 +46,17 @@ The board has 2 dimensions: X horizontally and Y vertically. Each of these has a
 
 # TODO:
 Others
-* **WRITE TESTS**
+
 * Add some code coverage tools
-* Explore some git-hub actions (To run the tests when you do a PR, things like that)
+* Explore some git-hub actions (To run the tests when you do a PR, things like that) [FOLLOW THIS GUIDE](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven)
+* Add license
+* Define a How to contribute (checkmarks with adding tests, having coverage above smth etc)
+* *WRITE TESTS*
 ---
 Code
-* decide on what the Response should look like
-* play with the custom exception
+* Investigate why after making a move, when you call GetPiece from the new position body is null.
+* **START THE FRONTEND**
+* Add for each piece moving pattern
+* Add is giving check section
 * Adding special rules: Pawn moving 2 squares, Castle, En Passant
+* Check when to Destroy instances of the pieces

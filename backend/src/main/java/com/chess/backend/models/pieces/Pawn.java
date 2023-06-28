@@ -37,8 +37,7 @@ public class Pawn extends Piece {
      */
     private boolean isPawnCapturing(Position oldPosition, Position newPosition) {
         //check Whether there is a piece to the desired square and if it is opposite piece
-        boolean isOppositePieceThere = gameBoard.getPieceAtPosition(newPosition) != null && gameBoard.getPieceAtPosition(newPosition).color != this.color;
-        if(isOppositePieceThere){
+        if(isOppositePieceOnThePosition(newPosition)){
             switch (this.color){
                 case WHITE -> {
                     if(newPosition.getY() - oldPosition.getY() == 1){
@@ -76,6 +75,10 @@ public class Pawn extends Piece {
                 }
             }
         }
+        return false;
+    }
+    @Override
+    public boolean isGivingCheck(Position newPosition) {
         return false;
     }
     //TODO implementation

@@ -9,6 +9,11 @@ public class Queen extends Piece {
         return false;
     }
 
+    @Override
+    public boolean isGivingCheck(Position newPosition) {
+        return false;
+    }
+
     public Queen(PieceColor pieceColor) {
         this.color = pieceColor;
     }

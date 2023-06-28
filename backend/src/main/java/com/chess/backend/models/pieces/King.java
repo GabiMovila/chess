@@ -9,6 +9,11 @@ public class King extends Piece {
         return false;
     }
 
+    @Override
+    public boolean isGivingCheck(Position newPosition) {
+        return false;
+    }
+
     public King(PieceColor color) {
         this.color=color;
     }

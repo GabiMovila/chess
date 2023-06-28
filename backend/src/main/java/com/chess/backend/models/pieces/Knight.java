@@ -9,6 +9,11 @@ public class Knight extends Piece {
         return false;
     }
 
+    @Override
+    public boolean isGivingCheck(Position newPosition) {
+        return false;
+    }
+
     public Knight(PieceColor color) {
         this.color = color;
     }
