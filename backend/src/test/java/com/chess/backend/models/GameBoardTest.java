@@ -105,5 +105,4 @@ class GameBoardTest {
 
     }
 
-    //TODO: add Tests for black pieces + all pawns
 }

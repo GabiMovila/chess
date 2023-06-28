@@ -8,6 +8,12 @@ public class Rook extends Piece {
     public boolean isMovePossible(Position oldPosition, Position newPosition) {
           return false;
     }
+
+    @Override
+    public boolean isGivingCheck(Position newPosition) {
+        return false;
+    }
+
     public Rook(PieceColor color) {
         this.color = color;
     }
