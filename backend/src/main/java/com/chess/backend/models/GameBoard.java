@@ -53,18 +53,18 @@ public class GameBoard {
         }
 
         // Generate black pieces
-        board.put(Position.getPosition(1,8),new Rook(PieceColor.WHITE));
-        board.put(Position.getPosition(2,8),new Knight(PieceColor.WHITE));
-        board.put(Position.getPosition(3,8),new Bishop(PieceColor.WHITE));
-        board.put(Position.getPosition(4,8),new Queen(PieceColor.WHITE));
-        board.put(Position.getPosition(5,8),new King(PieceColor.WHITE));
-        board.put(Position.getPosition(6,8),new Bishop(PieceColor.WHITE));
-        board.put(Position.getPosition(7,8),new Knight(PieceColor.WHITE));
-        board.put(Position.getPosition(8,8),new Rook(PieceColor.WHITE));
+        board.put(Position.getPosition(1,8),new Rook(PieceColor.BLACK));
+        board.put(Position.getPosition(2,8),new Knight(PieceColor.BLACK));
+        board.put(Position.getPosition(3,8),new Bishop(PieceColor.BLACK));
+        board.put(Position.getPosition(4,8),new Queen(PieceColor.BLACK));
+        board.put(Position.getPosition(5,8),new King(PieceColor.BLACK));
+        board.put(Position.getPosition(6,8),new Bishop(PieceColor.BLACK));
+        board.put(Position.getPosition(7,8),new Knight(PieceColor.BLACK));
+        board.put(Position.getPosition(8,8),new Rook(PieceColor.BLACK));
 
         // Generate black pawns
         for (int i=1; i<=8; i++){
-            board.put(Position.getPosition(i,7),new Pawn(PieceColor.WHITE));
+            board.put(Position.getPosition(i,7),new Pawn(PieceColor.BLACK));
         }
     }
 }
