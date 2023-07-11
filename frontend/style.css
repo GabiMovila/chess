@@ -1,1 +1,11 @@
+.white-box {
+    background-color: white;
+}
 
+.black-box {
+    background-color: black;
+}
+
+.div-row {
+    display: flex;
+}
