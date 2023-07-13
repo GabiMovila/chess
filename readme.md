@@ -49,13 +49,18 @@ Others
 
 * Add some code coverage tools
 * Explore some git-hub actions (To run the tests when you do a PR, things like that) [FOLLOW THIS GUIDE](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven)
-* Add license
 * Define a How to contribute (checkmarks with adding tests, having coverage above smth etc)
 * *WRITE TESTS*
+### ADD SOME TICKETING/TODOS to the project
 ---
 Code
+* **FRONT**
+* Verify why start game shows failed even tho it's 200
+* Implement logic for moving from one square to another
+* Make .env file work
+
+* **BACK**
 * Investigate why after making a move, when you call GetPiece from the new position body is null.
-* **START THE FRONTEND**
 * Add for each piece moving pattern
 * Add is giving check section
 * Adding special rules: Pawn moving 2 squares, Castle, En Passant

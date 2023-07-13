@@ -1,0 +1,15 @@
+.Table {
+    text-align: center;
+}
+
+.Table-white-box {
+    background-color: white;
+}
+
+.Table-black-box {
+    background-color: black;
+}
+
+.Table-div-row {
+    display: flex;
+}

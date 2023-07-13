@@ -23,9 +23,9 @@ public class MovesController {
     }
 
     @PostMapping("/api/v1/start")
-    public HttpStatus startGame(){
+    public ResponseEntity<ResponseData> startGame(){
        movesService.startGame();
-       return HttpStatus.OK;
+       return new ResponseEntity<>(new ResponseData(),HttpStatus.OK);
     }
 
     /**
