@@ -46,10 +46,8 @@ public class Pawn extends Piece {
                         }
                     }}
                 case BLACK -> {
-                    if(newPosition.getY() - oldPosition.getY() == -1){
-                        if(Math.abs(oldPosition.getX() - newPosition.getX()) == 1){
+                    if(newPosition.getY() - oldPosition.getY() == -1 && Math.abs(oldPosition.getX() - newPosition.getX()) == 1){
                             return true;
-                        }
                     }
                 }
             }
