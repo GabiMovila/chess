@@ -1,4 +1,4 @@
-import { makeMove } from "./MovesContainer";
+import { buildMovePositions } from "./MovesContainer";
 import Table from "./Table.css"
 
 function RenderBoard() {
@@ -9,14 +9,14 @@ function RenderBoard() {
             let divCell = document.createElement("td");
             let cellId = "" + j + i;
             divCell.setAttribute("id", cellId);
-            if ((i + j) % 2 == 0) {
+            if ((i + j) % 2 === 0) {
                 divCell.setAttribute("class", "Table-black-box");
             }
             else {
                 divCell.setAttribute("class", "Table-white-box");
             }
             divCell.addEventListener("click", function () {
-                makeMove(j, i);
+                buildMovePositions(j, i);
             })
             row.appendChild(divCell);
         }

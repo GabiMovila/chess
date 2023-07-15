@@ -23,7 +23,6 @@ public abstract class Piece {
     public void movePiece(Piece piece, Position oldPosition, Position newPosition){
         gameBoard.setPieceAtPosition(newPosition,piece);
         gameBoard.removePieceAtPosition(oldPosition);
-        var caca = gameBoard.getPieceAtPosition(newPosition);
     }
 
 }
