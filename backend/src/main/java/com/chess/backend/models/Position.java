@@ -5,7 +5,9 @@ import java.util.Map;
 
 public class Position {
     private static final Map<String, Position> positionMap = new HashMap<>();
+
     private final int x;
+
     private final int y;
 
     private Position(int x, int y) {

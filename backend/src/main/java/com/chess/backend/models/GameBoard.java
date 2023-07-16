@@ -1,6 +1,12 @@
 package com.chess.backend.models;
 
-import com.chess.backend.models.pieces.*;
+import com.chess.backend.models.pieces.Bishop;
+import com.chess.backend.models.pieces.King;
+import com.chess.backend.models.pieces.Knight;
+import com.chess.backend.models.pieces.Pawn;
+import com.chess.backend.models.pieces.Piece;
+import com.chess.backend.models.pieces.Queen;
+import com.chess.backend.models.pieces.Rook;
 import com.chess.backend.types.PieceColor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,6 +16,7 @@ import java.util.HashMap;
 public class GameBoard {
 
     private static final GameBoard INSTANCE = new GameBoard();
+
     private final HashMap<Position, Piece> board;
 
     private GameBoard() {
