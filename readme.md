@@ -10,34 +10,37 @@
 
 ### Backend expected request 
 
-```
-{ 
-    x: number,
-    y: number
+``` javascript
+{
+    oldPosition: {
+        x: oldX,
+        y: oldY
+    },
+    newPosition:
+    {
+        x: newX,
+        y: newY
+    }
 }
 
 ```
-The URL for the requests is `/api/v1/movePiece/{x}/{y}` where X and Y are the current positions of the piece.
+The URL for the requests is `/api/v1/movePiece/`. This request will be automatically built by clicking 2 squares on the board (old position and new position).
 ### Backend response
 
-```
+``` javascript
 {
-    PieceID: number,
-    FirstPiece: { 
-        x: number,
-        y: number
-    }
-    PieceID: number,
-    SecondPiece: {
-        x: number,
-        y: number
-    }
+    "validMove": true,
+    "capturedPiece": false,
+    "givesCheck": false,
+    "promotingPiece": false
 }
 ```
 
-The logic for the backend request-response is that whenever you need to move a piece you should specify the piece, the current position of the piece, and the desired new location.
+The logic for the backend request-response is that whenever you need to move a piece you should specify the old position and the desired new position by clicking from one square to another.
 
-What you get in response is either 1 or 2 pieceses new info. This is because everytime you make a move a maximum of 2 pieces are affected. If the move is simply taking one piece from one space to another, then the response will only contain the data for 1 piece. If the piece captures another piece for example there will be 2 infos given back, one for each piece 
+The response contains all the cosnequences of the desired move. For example the first parameter shows whether the move is possible or not. The second one shows whether when the move is done an opposing piece is being captured etc.
+
+All the parameters to be proeprly documented on the ASCIIDOC or swagger.
 
 ## Board notation
 ![Chess board](./board.png "Board")

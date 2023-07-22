@@ -14,11 +14,18 @@ function buildMovePositions(x, y) {
 
 async function makeMove(x, y) {
     const body = {
-        x: x,
-        y: y
+        oldPosition: {
+            x: oldX,
+            y: oldY
+        },
+        newPosition:
+        {
+            x: x,
+            y: y
+        }
     };
 
-    const url = `http://localhost:8080/api/v1/movePiece/${oldX}/${oldY}`
+    const url = `http://localhost:8080/api/v1/movePiece/`
     try {
         await axios.post(url, body);
     }
