@@ -1,5 +1,5 @@
 # Chess game
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9a86505b9342424abe59e83f7a98c3d9)](https://app.codacy.com/gh/GabiMovila/chess/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 ## Frontend
 
 ## Backend

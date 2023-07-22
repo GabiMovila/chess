@@ -1,6 +1,7 @@
 package com.chess.backend.controllers;
 
 import com.chess.backend.models.Position;
+import com.chess.backend.models.RequestData;
 import com.chess.backend.models.ResponseData;
 import com.chess.backend.models.pieces.Piece;
 import com.chess.backend.service.MovesService;
@@ -19,20 +20,20 @@ public class MovesController {
     @Autowired
     private MovesService movesService;
 
-    @PostMapping("/api/v1/movePiece/{x}/{y}")
-    public ResponseEntity<ResponseData> movePiece(@PathVariable("x") short x,
-                                                  @PathVariable("y") short y,
-                                                  @RequestBody Position secondPiece) {
-        var firstPosition = Position.getPosition(x, y);
-        var body = movesService.makeMove(firstPosition, secondPiece);
+    @PostMapping("/api/v1/movePiece/")
+    public ResponseEntity<ResponseData> movePiece(
+            @RequestBody RequestData positions) {
+        var body = movesService.makeMove(positions.getFirstPositionInstance(),
+                positions.getSecondPositionInstance());
         var status = HttpStatus.OK;
         return new ResponseEntity<>(body, status);
     }
 
     @PostMapping("/api/v1/start")
-    public ResponseEntity<ResponseData> startGame() {
+    public ResponseEntity<String> startGame() {
         movesService.startGame();
-        return new ResponseEntity<>(new ResponseData(), HttpStatus.OK);
+        var responseBody = "Game started succesfully";
+        return new ResponseEntity<>(responseBody, HttpStatus.OK);
     }
 
     /**

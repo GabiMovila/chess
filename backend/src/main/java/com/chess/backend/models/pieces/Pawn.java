@@ -30,13 +30,13 @@ public class Pawn extends Piece {
      * Checks if the pawn can capture, by checking if an opposite piece  is
      * located in the one of the ahead corner squares
      */
-    private boolean isPawnCapturing(Position oldPosition, Position newPosition){
+    private boolean isPawnCapturing(Position oldPosition, Position newPosition) {
         //check Whether there is a piece to the desired square and if it is
         // opposite piece
         if (isOppositePieceOnThePosition(newPosition)) {
             if (this.color == PieceColor.WHITE) {
                 if (newPosition.getY() - oldPosition.getY() == 1) {
-                    return Math.abs(oldPosition.getX() - newPosition.getX())==1;
+                    return Math.abs(oldPosition.getX() - newPosition.getX()) == 1;
                 }
             } else {
                 return newPosition.getY() - oldPosition.getY() == -1 &&
@@ -53,16 +53,13 @@ public class Pawn extends Piece {
      */
     private boolean isMovingForwardOneSquare(Position oldPosition,
                                              Position newPosition) {
-        if (oldPosition.getX() == newPosition.getX() &&
-                (this.color == PieceColor.WHITE)) {
-            if (newPosition.getY() - oldPosition.getY() == 1) {
-                return true;
-            } else {
-                return newPosition.getY() - oldPosition.getY() == -1;
-            }
-
+        if ((this.color == PieceColor.WHITE)) {
+            return (newPosition.getY() - oldPosition.getY() == 1) &&
+                    (newPosition.getX() == oldPosition.getX());
+        } else {
+            return (newPosition.getY() - oldPosition.getY() == -1) &&
+                    (newPosition.getX() == oldPosition.getX());
         }
-        return false;
     }
 
     @Override
@@ -71,12 +68,12 @@ public class Pawn extends Piece {
     }
 
     //TODO implementation
-//    private boolean isPawnFirstTimeMoving() {
-//        return false;
-//    }
+    /* private boolean isPawnFirstTimeMoving() {
+        return false;
+    }
 
     //TODO implementation
-//    private boolean canPawnTakeEnPassant() {
-//        return false;
-//    }
+    private boolean canPawnTakeEnPassant() {
+        return false;
+    } */
 }
