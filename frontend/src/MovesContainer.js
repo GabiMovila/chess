@@ -27,7 +27,11 @@ async function makeMove(x, y) {
 
     const url = `http://localhost:8080/api/v1/movePiece/`
     try {
-        await axios.post(url, body);
+        var response = await axios.post(url, body);
+        console.log(response.data)
+        if(response.data.validMove){
+            renderPieceToNewSquare();
+        }
     }
     catch (error) {
         console.log(error);
@@ -35,6 +39,14 @@ async function makeMove(x, y) {
     finally {
         oldX = null;
         oldY = null;
+    }
+
+    function renderPieceToNewSquare(){
+        let cssClasses = document.getElementById(`${oldX}${oldY}`).classList; 
+        var elements = Array.from(cssClasses)
+        var classToBeMoved = elements.pop();
+        document.getElementById(`${oldX}${oldY}`).classList= elements;
+        document.getElementById(`${x}${y}`).className += " " + classToBeMoved;
     }
 
 }

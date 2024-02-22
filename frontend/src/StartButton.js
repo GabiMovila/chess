@@ -4,18 +4,24 @@ import { Button } from '@mui/base';
 import RenderPieces from './RenderPieces';
 //TODO de schimbat use state-ul sa nu mi mai randeze eroare cand am response body gol si 
 //modificat si in backend endpointul sa nu mai returneze vreun tip de data
+const gameStarted = false;
 const StartButton = () => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
     // const url = process.env.HOSTNAME + "/api/v1/start"; 
     const url = "http://localhost:8080/api/v1/start"
 
+    const startGame = () => {
+        fetchData();
+        RenderPieces();
+    }
+
     const fetchData = async () => {
         try {
             console.log(url)
             const response = await axios.post(url);
             setResponse(response.data);
-            RenderPieces()
+            gameStarted = true;
         } catch (error) {
             setError(error.message);
         }
@@ -23,7 +29,7 @@ const StartButton = () => {
 
     return (
         <div>
-            <Button onClick={fetchData}>Start Game</Button>
+            <Button onClick={startGame}>Start Game</Button>
             {error && <div>Error: {error}</div>}
             {response && (
                 <div>
@@ -35,4 +41,4 @@ const StartButton = () => {
     );
 };
 
-export default StartButton;
+export {StartButton, gameStarted}

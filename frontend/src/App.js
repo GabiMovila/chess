@@ -1,7 +1,7 @@
 
 import './App.css';
 import RenderTable from './RenderBoard';
-import StartButton from './StartButton';
+import {StartButton} from './StartButton';
 
 function App() {
   RenderTable()

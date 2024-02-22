@@ -11,7 +11,6 @@ function RenderPieces() {
     document.getElementById("81").className += " " + "Black-rook";
 
     for(let i = 1; i <= 8; i++){
-        console.log(`${i}2`)
         document.getElementById(`${i}2`).className += " " + "Black-pawn";
     }
 
@@ -25,7 +24,6 @@ function RenderPieces() {
     document.getElementById("88").className += " " + "White-rook";
 
     for(let i = 1; i <= 8; i++){
-        console.log(`${i}2`)
         document.getElementById(`${i}7`).className += " " + "White-pawn";
     }
 }
