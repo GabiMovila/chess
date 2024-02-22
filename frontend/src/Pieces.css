@@ -1,0 +1,48 @@
+
+.White-king {
+    background-image: url("../resources/KingW.png");
+}
+
+.White-queen {
+    background-image: url("../resources/QueenW.png");
+}
+
+.White-pawn {
+    background-image: url("../resources/PawnD.png");
+}
+
+.White-rook {
+    background-image: url("../resources/RookW.png");
+}
+
+.White-horse {
+    background-image: url("../resources/HorseW.png");
+}
+
+.White-bishop {
+    background-image: url("../resources/BishopW.png");
+}
+
+.Black-pawn {
+    background-image: url("../resources/PawnB.png");
+}
+
+.Black-rook {
+    background-image: url("../resources/RookB.png");
+}
+
+.Black-horse {
+    background-image: url("../resources/HorseB.png");
+}
+
+.Black-bishop {
+    background-image: url("../resources/BishopB.png");
+}
+
+.Black-king {
+    background-image: url("../resources/KingB.png");
+}
+
+.Black-queen {
+    background-image: url("../resources/QueenB.png");
+}

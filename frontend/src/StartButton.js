@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Button } from '@mui/base';
+import RenderPieces from './RenderPieces';
 //TODO de schimbat use state-ul sa nu mi mai randeze eroare cand am response body gol si 
 //modificat si in backend endpointul sa nu mai returneze vreun tip de data
 const StartButton = () => {
@@ -14,6 +15,7 @@ const StartButton = () => {
             console.log(url)
             const response = await axios.post(url);
             setResponse(response.data);
+            RenderPieces()
         } catch (error) {
             setError(error.message);
         }

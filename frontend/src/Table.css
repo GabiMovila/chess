@@ -3,11 +3,15 @@
 }
 
 .Table-white-box {
-    background-color: white;
+    background-color: rgb(125, 152, 90);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .Table-black-box {
-    background-color: black;
+    background-color: rgb(234, 237, 206);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .Table-div-row {
