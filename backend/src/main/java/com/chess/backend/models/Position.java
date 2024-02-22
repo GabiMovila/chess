@@ -4,21 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Position {
-    private static Map<String, Position> positionMap = new HashMap<>();
-    private int x;
-    private int y;
+    private static final Map<String, Position> positionMap = new HashMap<>();
+
+    private final int x;
+
+    private final int y;
 
     private Position(int x, int y) {
         this.x = x;
         this.y = y;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
     }
 
     // Flyweight factory method
@@ -31,5 +25,13 @@ public class Position {
             positionMap.put(key, position);
             return position;
         }
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 }

@@ -1,5 +1,5 @@
 # Chess game
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9a86505b9342424abe59e83f7a98c3d9)](https://app.codacy.com/gh/GabiMovila/chess/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 ## Frontend
 
 ## Backend
@@ -10,53 +10,39 @@
 
 ### Backend expected request 
 
-```
-{ 
-    x: number,
-    y: number
+``` javascript
+{
+    oldPosition: {
+        x: oldX,
+        y: oldY
+    },
+    newPosition:
+    {
+        x: newX,
+        y: newY
+    }
 }
 
 ```
-The URL for the requests is `/api/v1/movePiece/{x}/{y}` where X and Y are the current positions of the piece.
+The URL for the requests is `/api/v1/movePiece/`. This request will be automatically built by clicking 2 squares on the board (old position and new position).
 ### Backend response
 
-```
+``` javascript
 {
-    PieceID: number,
-    FirstPiece: { 
-        x: number,
-        y: number
-    }
-    PieceID: number,
-    SecondPiece: {
-        x: number,
-        y: number
-    }
+    "validMove": true,
+    "capturedPiece": false,
+    "givesCheck": false,
+    "promotingPiece": false
 }
 ```
 
-The logic for the backend request-response is that whenever you need to move a piece you should specify the piece, the current position of the piece, and the desired new location.
+The logic for the backend request-response is that whenever you need to move a piece you should specify the old position and the desired new position by clicking from one square to another.
 
-What you get in response is either 1 or 2 pieceses new info. This is because everytime you make a move a maximum of 2 pieces are affected. If the move is simply taking one piece from one space to another, then the response will only contain the data for 1 piece. If the piece captures another piece for example there will be 2 infos given back, one for each piece
+The response contains all the cosnequences of the desired move. For example the first parameter shows whether the move is possible or not. The second one shows whether when the move is done an opposing piece is being captured etc.
+
+All the parameters to be proeprly documented on the ASCIIDOC or swagger.
 
 ## Board notation
 ![Chess board](./board.png "Board")
 
 The board has 2 dimensions: X horizontally and Y vertically. Each of these has a value between 1 and 8.
-
-# TODO:
-Others
-
-* Add some code coverage tools
-* Explore some git-hub actions (To run the tests when you do a PR, things like that) [FOLLOW THIS GUIDE](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven)
-* Add license
-* Define a How to contribute (checkmarks with adding tests, having coverage above smth etc)
-* *WRITE TESTS*
----
-Code
-* Investigate why after making a move, when you call GetPiece from the new position body is null.
-* **START THE FRONTEND**
-* Add for each piece moving pattern
-* Add is giving check section
-* Adding special rules: Pawn moving 2 squares, Castle, En Passant
-* Check when to Destroy instances of the pieces

@@ -1,20 +1,20 @@
 package com.chess.backend.models.pieces;
 
-import com.chess.backend.types.PieceColor;
 import com.chess.backend.models.Position;
+import com.chess.backend.types.PieceColor;
 
 public class Rook extends Piece {
+    public Rook(PieceColor color) {
+        this.color = color;
+    }
+
     @Override
     public boolean isMovePossible(Position oldPosition, Position newPosition) {
-          return false;
+        return false;
     }
 
     @Override
     public boolean isGivingCheck(Position newPosition) {
         return false;
-    }
-
-    public Rook(PieceColor color) {
-        this.color = color;
     }
 }

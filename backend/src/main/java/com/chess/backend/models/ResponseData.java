@@ -2,8 +2,11 @@ package com.chess.backend.models;
 
 public class ResponseData {
     private boolean validMove;
+
     private boolean capturedPiece;
+
     private boolean givesCheck;
+
     //TODO implement the logic for when a pawn is promoting
     private boolean promotingPiece;
 
